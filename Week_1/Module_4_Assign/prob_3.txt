@@ -1,0 +1,59 @@
+A. -----> Write the difference between List and Dictionary of Python.
+
+solution :
+
+____ Lists -->
+        - Ordered collection of items.
+        - Items are accessed using their index.
+        - Allows duplicate elements.
+        - Defined using square brackets `[]`.
+
+____ Dictionaries -->
+        - Unordered collection of key-value pairs.
+        - Items are accessed using keys.
+        - Keys must be unique.
+        - Defined using curly braces `{}` with key-value pairs separated by colons `:`.
+
+____ Example -->
+        List: [1, 2, 3, 4]
+        Dictionary: {"a": 1, "b": 2, "c": 3}
+
+################################################################################################################
+
+
+B. -----> Write about *args and **kwargs of Python with proper examples.
+
+solution :
+
+____ *args -->
+        - Used to pass a variable number of non-keyword arguments to a function.
+        - Arguments are received as a tuple.
+        - Useful when you don't know in advance how many arguments will be passed.
+
+ ____ Example -->
+
+        def sum_all(*args):
+            return sum(args)
+
+        print(sum_all(1, 2, 3))  # --> Output: 6
+        print(sum_all(4, 5))     # --> Output: 9
+
+
+____ **kwargs -->
+        - Used to pass a variable number of keyword arguments to a function.
+        - Arguments are received as a dictionary.
+        - Useful when you want to handle named arguments dynamically.
+
+____ Example -->
+
+        def print_detail(**kwargs):
+            for key, value in kwargs.items():
+                print(f"{key} : {value}")
+
+        print_detail(name="Nazmul", age=22, city="Dhaka")
+
+        # ____Output -->
+
+        # name : Nazmul
+        # age : 22
+        # city : Dhaka
