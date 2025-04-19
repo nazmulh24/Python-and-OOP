@@ -17,9 +17,11 @@ class Menu:
         if item:
             self.items.remove(item)
             print("Item deleted!!!")
+        else:
+            print("Item not found...")
 
     def show_menu(self):
-        print("Show Menu Items -->")
+        print("------- Show Menu Items -------")
         print("Name\t\tPrice\t\tQuantity")
         for item in self.items:
             print(f"{item.name}\t\t{item.price}\t\t{item.quantity}")
