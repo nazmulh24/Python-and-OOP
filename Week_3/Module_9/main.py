@@ -1,4 +1,4 @@
-from food_item import FoodItem
+from food_item import Food_Item
 from menu import Menu
 from users import Customer, Admin, Employee
 from restaurent import Restaurent
@@ -61,7 +61,7 @@ def admin_menu():
             item_name = input("Enter Item Name : ")
             item_price = int(input("Enter Item Price : "))
             item_quantity = int(input("Enter Item Quantity : "))
-            item = FoodItem(item_name, item_price, item_quantity)
+            item = Food_Item(item_name, item_price, item_quantity)
             admin.add_new_item(mamar_restaurent, item)
 
         elif choice == 2:
