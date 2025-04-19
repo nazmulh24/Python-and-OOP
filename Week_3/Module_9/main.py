@@ -88,7 +88,7 @@ def admin_menu():
 
 
 while True:
-    print("Welcome!!")
+    print("--- Welcome ---")
     print("1. Customer")
     print("2. Admin")
     print("3. Exit")
