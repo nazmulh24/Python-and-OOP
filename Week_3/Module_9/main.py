@@ -5,7 +5,7 @@ from restaurent import Restaurent
 from orders import Order
 
 
-mamar_restaurent = Restaurent("Mamar Restaurement")
+star_restaurent = Restaurent("Star Restaurement")
 
 
 def customer_menu():
@@ -16,7 +16,7 @@ def customer_menu():
     customer = Customer(name=name, email=email, phone=phone, address=address)
 
     while True:
-        print(f"Welcome {customer.name}!!")
+        print(f"------ Welcome {customer.name} -----")
         print("1. View Menu")
         print("2. Add item to cart")
         print("3. View Cart")
@@ -25,11 +25,11 @@ def customer_menu():
 
         choice = int(input("Enter Your Choice : "))
         if choice == 1:
-            customer.view_menu(mamar_restaurent)
+            customer.view_menu(star_restaurent)
         elif choice == 2:
             item_name = input("Enter item name : ")
             item_quantity = int(input("Enter item quantity : "))
-            customer.add_to_cart(mamar_restaurent, item_name, item_quantity)
+            customer.add_to_cart(star_restaurent, item_name, item_quantity)
         elif choice == 3:
             customer.view_cart()
         elif choice == 4:
@@ -62,7 +62,7 @@ def admin_menu():
             item_price = int(input("Enter Item Price : "))
             item_quantity = int(input("Enter Item Quantity : "))
             item = Food_Item(item_name, item_price, item_quantity)
-            admin.add_new_item(mamar_restaurent, item)
+            admin.add_new_item(star_restaurent, item)
 
         elif choice == 2:
             name = input("Enter employee name : ")
@@ -73,14 +73,14 @@ def admin_menu():
             salary = input("Enter employee salary : ")
             address = input("Enter employee address : ")
             employee = Employee(name, email, phone, address, age, designation, salary)
-            admin.add_employee(mamar_restaurent, employee)
+            admin.add_employee(star_restaurent, employee)
         elif choice == 3:
-            admin.view_employee(mamar_restaurent)
+            admin.view_employee(star_restaurent)
         elif choice == 4:
-            admin.view_menu(mamar_restaurent)
+            admin.view_menu(star_restaurent)
         elif choice == 5:
             item_name = input("Enter item name : ")
-            admin.remove_item(mamar_restaurent, item_name)
+            admin.remove_item(star_restaurent, item_name)
         elif choice == 6:
             break
         else:
