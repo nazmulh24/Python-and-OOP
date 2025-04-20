@@ -1,8 +1,8 @@
 class ClassRoom:
     def __init__(self, name):
-        self.name - name
-        self.students = []
-        self.subjects = []
+        self.name = name
+        self.students = []  # --> list of student objects
+        self.subjects = []  # --> list of subject objects
 
     def add_student(self, student):
         roll_no = f"{self.name}-{len(self.students)+1}"
