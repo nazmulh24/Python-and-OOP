@@ -5,7 +5,7 @@ class ClassRoom:
         self.subjects = []  # --> list of subject objects
 
     def add_student(self, student):
-        roll_no = f"{self.name}-{len(self.students)+1}"
+        roll_no = f"{self.name} - {len(self.students)+1}"
         student.id = roll_no
         self.students.append(student)
 
@@ -16,4 +16,4 @@ class ClassRoom:
         for subject in self.subjects:
             subject.exam(self.students)
         for student in self.students:
-            subject.calculate_final_grade()
+            student.calculate_final_grade()

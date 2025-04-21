@@ -13,7 +13,7 @@ class School:
 
     def student_admission(self, student):
         classname = student.classroom.name
-        self.classrooms[classname].add_students(student)
+        self.classrooms[classname].add_student(student)
 
     @staticmethod
     def calculate_grade(marks):
@@ -44,7 +44,8 @@ class School:
 
     @staticmethod
     def value_to_grade(value):
-        if value == 4:
+        tolerance = 1e-9
+        if abs(value - 4.0) < tolerance:
             return "A+"
         elif value >= 3.5:
             return "A"
@@ -56,14 +57,6 @@ class School:
             return "D"
         else:
             return "F"
-
-    def __repr__(self):
-        # All Classrooms
-        # All Students
-        # All Subjects
-        # All Teachers
-        # All Student Results
-        pass
 
     def __repr__(self):
         # --> All Classrooms

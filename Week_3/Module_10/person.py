@@ -11,7 +11,7 @@ class Teacher(Person):
     def __init__(self, name):
         super().__init__(name)
 
-    def evalute_exam(self):
+    def evaluate_exam(self):
         return random.randint(30, 100)
 
 
@@ -24,7 +24,7 @@ class Student(Person):
         self.subject_grade = {}
         self.grade = None
 
-    def final_grade(self):
+    def calculate_final_grade(self):
         sum = 0
         for grade in self.subject_grade.values():
             point = School.grade_to_value(grade)
