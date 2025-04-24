@@ -1,8 +1,6 @@
 from food_item import Food_Item
-from menu import Menu
 from users import Customer, Admin, Employee
 from restaurent import Restaurent
-from orders import Order
 
 
 star_restaurent = Restaurent("Star Restaurement")
